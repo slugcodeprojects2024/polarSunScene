@@ -1,22 +1,20 @@
 {
-  "name": "lab-5-template",
+  "name": "terror-survival-game",
   "version": "1.0.0",
-  "description": "",
+  "description": "Arctic survival horror game inspired by The Terror",
   "main": "index.html",
   "scripts": {
-    "start": "parcel index.html --open",
-    "build": "parcel build index.html"
+    "start": "parcel src/index.html --open",
+    "build": "parcel build src/index.html --dist-dir docs --public-url ./",
+    "deploy": "npm run build && git add docs && git commit -m 'Deploy to GitHub Pages' && git push"
   },
   "dependencies": {
-    "parcel-bundler": "^1.6.1",
-    "stats.js": "0.17.0"
+    "three": "^0.160.0",
+    "cannon-es": "^0.20.0",
+    "stats.js": "^0.17.0"
   },
   "devDependencies": {
-    "@babel/core": "7.2.0",
-    "typescript": "4.4.4"
-  },
-  "resolutions": {
-    "@babel/preset-env": "7.13.8"
-  },
-  "keywords": []
+    "parcel": "^2.10.0",
+    "@parcel/transformer-glsl": "^2.10.0"
+  }
 }
